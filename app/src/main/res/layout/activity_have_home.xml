@@ -1,0 +1,661 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/drawer_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/back">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colorPrimary"
+                app:titleTextColor="#fff">
+
+                <fragment
+                    android:id="@+id/add"
+                    android:name="com.google.android.libraries.places.widget.AutocompleteSupportFragment"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+            </androidx.appcompat.widget.Toolbar>
+
+            <ScrollView
+                android:id="@+id/scrview"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+
+                    <fragment xmlns:map="http://schemas.android.com/apk/res-auto"
+                        android:id="@+id/map"
+                        android:name="com.google.android.gms.maps.SupportMapFragment"
+                        class="com.LBS.DreamHome.mapfrag"
+                        android:layout_width="match_parent"
+                        android:layout_height="250dp"
+                        map:mapType="normal"
+                        map:uiCompass="true"
+                        map:uiRotateGestures="true"
+                        map:uiScrollGestures="true"
+                        map:uiTiltGestures="true"
+                        map:uiZoomControls="true"
+                        map:uiZoomGestures="true"
+                        tools:context=".MapsActivity" />
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="50dp"
+                            android:layout_height="60dp"
+                            android:layout_marginLeft="8dp"
+                            android:src="@mipmap/state" />
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <AutoCompleteTextView
+                                android:id="@+id/state"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="16dp"
+                                android:layout_marginRight="16dp"
+                                android:layout_marginTop="8dp"
+                                android:background="@drawable/textback"
+                                android:hint="State"
+
+                                android:padding="8dp" />
+                        </com.google.android.material.textfield.TextInputLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="50dp"
+                            android:layout_height="60dp"
+                            android:layout_marginLeft="8dp"
+                            android:src="@mipmap/city" />
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <AutoCompleteTextView
+                                android:id="@+id/city"
+
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="16dp"
+                                android:layout_marginRight="16dp"
+                                android:layout_marginTop="8dp"
+                                android:background="@drawable/textback"
+                                android:hint="City"
+                                android:padding="8dp"
+
+                                />
+                        </com.google.android.material.textfield.TextInputLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="50dp"
+                            android:layout_height="60dp"
+                            android:layout_marginLeft="8dp"
+                            android:src="@mipmap/area" />
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <EditText
+                                android:id="@+id/area"
+                                style="@style/Widget.AppCompat.EditText"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="16dp"
+                                android:layout_marginRight="16dp"
+                                android:layout_marginTop="8dp"
+                                android:background="@drawable/textback"
+                                android:hint="Area"
+                                android:padding="8dp"
+
+                                />
+                        </com.google.android.material.textfield.TextInputLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="50dp"
+                            android:layout_height="60dp"
+                            android:layout_marginLeft="8dp"
+                            android:src="@mipmap/plot" />
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <EditText
+                                android:id="@+id/plot"
+                                style="@style/Widget.AppCompat.EditText"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="16dp"
+                                android:layout_marginRight="16dp"
+                                android:layout_marginTop="8dp"
+                                android:background="@drawable/textback"
+                                android:hint="Plot No."
+                                android:padding="8dp"
+
+                                />
+                        </com.google.android.material.textfield.TextInputLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="50dp"
+                            android:layout_height="60dp"
+                            android:layout_marginLeft="8dp"
+                            android:src="@mipmap/phone" />
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <EditText
+                                android:id="@+id/phoneNo"
+                                style="@style/Widget.AppCompat.EditText"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="16dp"
+                                android:layout_marginRight="16dp"
+                                android:layout_marginTop="8dp"
+                                android:background="@drawable/textback"
+                                android:hint="Phone No."
+                                android:inputType="phone"
+                                android:padding="8dp"
+
+                                />
+                        </com.google.android.material.textfield.TextInputLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="50dp"
+                            android:layout_height="60dp"
+                            android:layout_marginLeft="8dp"
+                            android:src="@mipmap/price" />
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <EditText
+                                android:id="@+id/price"
+                                style="@style/Widget.AppCompat.EditText"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="16dp"
+                                android:layout_marginRight="16dp"
+                                android:layout_marginTop="8dp"
+                                android:background="@drawable/textback"
+                                android:hint="price"
+                                android:inputType="number"
+                                android:padding="8dp"
+
+                                />
+                        </com.google.android.material.textfield.TextInputLayout>
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="16dp"
+                        android:layout_marginTop="16dp"
+                        android:text="Willing to rent out to"
+                        android:textColor="#000"
+                        android:textSize="20dp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="8dp"
+                        android:layout_marginLeft="16dp"
+                        android:layout_marginRight="16dp"
+                        android:layout_marginTop="16dp"
+                        android:background="@drawable/textback"
+                        android:orientation="horizontal"
+                        android:padding="8dp">
+
+                        <RadioGroup
+                            android:id="@+id/rentto"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <RadioButton
+                                android:id="@+id/singlemen"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="Single Men" />
+
+                            <RadioButton
+                                android:id="@+id/singlewomen"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="Single Woman" />
+
+                            <RadioButton
+                                android:id="@+id/family"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="Family" />
+                        </RadioGroup>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="50dp"
+                            android:layout_height="60dp"
+                            android:layout_marginLeft="8dp"
+                            android:src="@mipmap/agreement" />
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <EditText
+                                android:id="@+id/agreement"
+                                style="@style/Widget.AppCompat.EditText"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="16dp"
+                                android:layout_marginRight="16dp"
+                                android:layout_marginTop="8dp"
+                                android:background="@drawable/textback"
+                                android:hint="Agreement In Years"
+                                android:inputType="number"
+                                android:padding="8dp"
+
+                                />
+                        </com.google.android.material.textfield.TextInputLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="50dp"
+                            android:layout_height="60dp"
+                            android:layout_marginLeft="8dp"
+                            android:src="@mipmap/bedroom" />
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <EditText
+                                android:id="@+id/bedrooms"
+                                style="@style/Widget.AppCompat.EditText"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="16dp"
+                                android:layout_marginRight="16dp"
+                                android:layout_marginTop="8dp"
+                                android:background="@drawable/textback"
+                                android:hint="BedRooms"
+                                android:inputType="number"
+                                android:padding="8dp"
+
+                                />
+                        </com.google.android.material.textfield.TextInputLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="50dp"
+                            android:layout_height="60dp"
+                            android:layout_marginLeft="8dp"
+                            android:src="@mipmap/bathroom" />
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <EditText
+                                android:id="@+id/bathrooms"
+                                style="@style/Widget.AppCompat.EditText"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="16dp"
+                                android:layout_marginRight="16dp"
+                                android:layout_marginTop="8dp"
+                                android:background="@drawable/textback"
+                                android:hint="BathRooms"
+                                android:inputType="number"
+                                android:padding="8dp"
+
+                                />
+                        </com.google.android.material.textfield.TextInputLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="50dp"
+                            android:layout_height="60dp"
+                            android:layout_marginLeft="8dp"
+                            android:src="@mipmap/toilet" />
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <EditText
+                                android:id="@+id/toilets"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="16dp"
+                                android:layout_marginRight="16dp"
+                                android:layout_marginTop="8dp"
+                                android:background="@drawable/textback"
+                                android:hint="Toilets"
+                                android:inputType="number"
+                                android:padding="8dp"
+
+                                />
+                        </com.google.android.material.textfield.TextInputLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="50dp"
+                            android:layout_height="60dp"
+                            android:layout_marginLeft="8dp"
+                            android:src="@mipmap/wardrobe" />
+
+                        <CheckBox
+                            android:id="@+id/wardrobe"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="16dp"
+                            android:layout_marginRight="16dp"
+                            android:layout_marginTop="8dp"
+                            android:background="@drawable/textback"
+                            android:padding="8dp"
+                            android:text="WardRobe? YES/NO"
+
+                            />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="50dp"
+                            android:layout_height="60dp"
+                            android:layout_marginLeft="8dp"
+                            android:src="@mipmap/bed" />
+
+                        <CheckBox
+                            android:id="@+id/beds"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="16dp"
+                            android:layout_marginRight="16dp"
+                            android:layout_marginTop="8dp"
+                            android:background="@drawable/textback"
+                            android:padding="8dp"
+                            android:text="Beds?  YES/NO" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="50dp"
+                            android:layout_height="60dp"
+                            android:layout_marginLeft="8dp"
+                            android:src="@mipmap/fan" />
+
+                        <CheckBox
+                            android:id="@+id/fans"
+
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="16dp"
+                            android:layout_marginRight="16dp"
+                            android:layout_marginTop="8dp"
+                            android:background="@drawable/textback"
+                            android:padding="8dp"
+                            android:text="Fans? YES/NO" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="50dp"
+                            android:layout_height="60dp"
+                            android:layout_marginLeft="8dp"
+                            android:src="@mipmap/light" />
+
+                        <CheckBox
+                            android:id="@+id/lights"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="16dp"
+                            android:layout_marginRight="16dp"
+                            android:layout_marginTop="8dp"
+                            android:background="@drawable/textback"
+                            android:padding="8dp"
+                            android:text="Lights? YES/NO"
+
+                            />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="50dp"
+                            android:layout_height="60dp"
+                            android:layout_marginLeft="8dp"
+                            android:src="@mipmap/kitchen" />
+
+                        <CheckBox
+                            android:id="@+id/modularkitchen"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="16dp"
+                            android:layout_marginRight="16dp"
+                            android:layout_marginTop="8dp"
+                            android:background="@drawable/textback"
+                            android:padding="8dp"
+                            android:text="Modular-Kitchen? YES/NO" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="50dp"
+                            android:layout_height="60dp"
+                            android:layout_marginLeft="8dp"
+                            android:src="@mipmap/ac" />
+
+                        <CheckBox
+                            android:id="@+id/ac"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="16dp"
+                            android:layout_marginRight="16dp"
+                            android:layout_marginTop="8dp"
+                            android:background="@drawable/textback"
+                            android:padding="8dp"
+                            android:text="AC? YES/NO" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="50dp"
+                            android:layout_height="60dp"
+                            android:layout_marginLeft="8dp"
+                            android:src="@mipmap/inverter" />
+
+                        <CheckBox
+                            android:id="@+id/inverter"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="16dp"
+                            android:layout_marginRight="16dp"
+                            android:layout_marginTop="8dp"
+                            android:background="@drawable/textback"
+                            android:padding="8dp"
+                            android:text="Inverter? YES/NO"
+
+                            />
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="16dp"
+                        android:layout_marginTop="16dp"
+                        android:text="Upload Photos"
+                        android:textSize="20dp" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/textback">
+
+                        <ImageView
+                            android:id="@+id/imgView"
+                            android:layout_width="wrap_content"
+                            android:layout_height="150dp" />
+
+                        <Button
+                            android:id="@+id/btnChoose"
+                            android:layout_width="50dp"
+                            android:layout_height="60dp"
+                            android:layout_alignParentRight="true"
+                            android:layout_marginBottom="16dp"
+                            android:layout_marginLeft="16dp"
+                            android:layout_marginRight="16dp"
+                            android:background="@mipmap/gallery"
+                            android:onClick="chooseImage" />
+
+                        <Button
+                            android:id="@+id/btncamera"
+                            android:layout_width="50dp"
+                            android:layout_height="60dp"
+                            android:layout_alignParentRight="true"
+                            android:layout_below="@id/btnChoose"
+                            android:layout_marginBottom="60dp"
+                            android:layout_marginLeft="16dp"
+                            android:layout_marginRight="16dp"
+                            android:background="@mipmap/camera"
+                            android:onClick="captureImage" />
+
+
+                    </RelativeLayout>
+                </LinearLayout>
+
+            </ScrollView>
+        </LinearLayout>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:onClick="submit"
+            android:padding="16dp"
+            android:text="SUBMIT"
+            android:textColor="@color/butcol"
+            android:textSize="25dp" />
+    </RelativeLayout>
+
+    <com.google.android.material.navigation.NavigationView
+        android:id="@+id/nav_view"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:fitsSystemWindows="true"
+        app:headerLayout="@layout/nav_header"
+        app:menu="@menu/drawer_view" />
+
+</androidx.drawerlayout.widget.DrawerLayout>

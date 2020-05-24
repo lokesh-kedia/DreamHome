@@ -1,0 +1,56 @@
+{
+  "project_info": {
+    "project_number": "75769158555",
+    "firebase_url": "https://friendlychat-da77a.firebaseio.com",
+    "project_id": "friendlychat-da77a",
+    "storage_bucket": "friendlychat-da77a.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:75769158555:android:869366d1ab7b7118",
+        "android_client_info": {
+          "package_name": "com.LBS.DreamHome"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "75769158555-d4v254sg1mm13me95qbi40lf9orkt0lh.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.LBS.DreamHome",
+            "certificate_hash": "8d927c3e3cae75d1d02d884ca1f9d043d1420956"
+          }
+        },
+        {
+          "client_id": "75769158555-ld8ckgu90dajf5pmk9khl7oic3kvdvfc.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAK1RvR5xPY8xLsK66P_aCoVYKqbIZs6hc"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "75769158555-ld8ckgu90dajf5pmk9khl7oic3kvdvfc.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      },
+      "admob_app_id": "ca-app-pub-5314021439844328~8679195677"
+    }
+  ],
+  "configuration_version": "1"
+}

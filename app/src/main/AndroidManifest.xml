@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.LBS.DreamHome">
+
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <uses-feature android:name="android.hardware.camera" />
+    <uses-feature android:name="android.hardware.camera.autofocus" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.AppCompat.Light.NoActionBar">
+        <activity
+            android:name=".HomePage"
+            android:theme="@style/AppTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".MainActivity"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".HaveHome"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".NeedHome"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".Filter"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".HomeInfo"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".ChatRoom"
+            android:theme="@style/AppTheme" />
+
+        <meta-data
+            android:name="com.google.android.gms.ads.APPLICATION_ID"
+            android:value="ca-app-pub-5314021439844328~8679195677" />
+        <meta-data
+            android:name="com.google.android.geo.api_key"
+            android:value="AIzaSyAK1RvR5xPY8xLsK66P_aCoVYKqbIZs6hc" />
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyAK1RvR5xPY8xLsK66P_aCoVYKqbIZs6hc" />
+
+        <activity
+            android:name=".aboutus"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".Profile"
+            android:label="@string/title_activity_profile"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".preferences"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".Shortlist"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".Uploads"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".ChatList"
+            android:theme="@style/AppTheme" />
+
+        <service
+            android:name=".MyFirebaseMessagingService"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+        <service
+            android:name=".MyFirebaseInstanceIdService"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.google.firebase.INSTANCE_ID_EVENT" />
+            </intent-filter>
+        </service>
+
+        <activity
+            android:name=".Recommend"
+            android:theme="@style/AppTheme" />
+        <activity android:name=".FilterOptions"
+            android:theme="@style/AppTheme" ></activity>
+    </application>
+
+</manifest>

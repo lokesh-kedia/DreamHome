@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<resources>
+    <color name="colorPrimary">#448aff</color>
+    <color name="primaryLightColor">#83b9ff</color>
+    <color name="primaryDarkColor">#005ecb</color>
+    <color name="textColorPrimary">#ffffff</color>
+    <color name="colorAccent">#83b9ff</color>
+    <color name="back">#FFB9D3FD</color>
+    <color name="butcol">#fff</color>
+    <color name="com_facebook_blue">#3b5998</color>
+    <color name="buttonTextColor">#fff</color>
+
+</resources>
+

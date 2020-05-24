@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/drawer_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:context=".ChatRoom">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/colorPrimary"
+            app:titleTextColor="#fff" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/msgss"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@id/layout_chatbox"
+            android:layout_below="@id/toolbar"
+            android:layout_marginBottom="16dp"
+            app:reverseLayout="true"
+            app:stackFromEnd="true" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_above="@id/layout_chatbox"
+            android:layout_marginBottom="0dp"
+            android:background="#dfdfdf" />
+
+        <LinearLayout
+            android:id="@+id/layout_chatbox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:minHeight="48dp"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/msg"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:layout_weight="1"
+                android:hint="Enter message"
+                android:maxLines="6" />
+
+            <Button
+                android:id="@+id/button_chatbox_send"
+                android:layout_width="64dp"
+                android:layout_height="48dp"
+                android:layout_gravity="bottom"
+                android:clickable="true"
+                android:gravity="center"
+                android:onClick="send"
+                android:text="SEND"
+                android:textColor="@color/butcol"
+                android:textSize="14dp" />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <com.google.android.material.navigation.NavigationView
+        android:id="@+id/nav_view"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:fitsSystemWindows="true"
+        app:headerLayout="@layout/nav_header"
+        app:menu="@menu/drawer_view" />
+</androidx.drawerlayout.widget.DrawerLayout>
