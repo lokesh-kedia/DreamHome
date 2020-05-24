@@ -47,16 +47,6 @@
             android:name=".ChatRoom"
             android:theme="@style/AppTheme" />
 
-        <meta-data
-            android:name="com.google.android.gms.ads.APPLICATION_ID"
-            android:value="ca-app-pub-5314021439844328~8679195677" />
-        <meta-data
-            android:name="com.google.android.geo.api_key"
-            android:value="AIzaSyAK1RvR5xPY8xLsK66P_aCoVYKqbIZs6hc" />
-        <meta-data
-            android:name="com.google.android.geo.API_KEY"
-            android:value="AIzaSyAK1RvR5xPY8xLsK66P_aCoVYKqbIZs6hc" />
-
         <activity
             android:name=".aboutus"
             android:theme="@style/AppTheme" />
